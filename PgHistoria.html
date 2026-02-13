@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,14 +29,11 @@
         header h1 {
             font-size: 3.5rem;
             color: var(--color-rojo);
-            text-shadow: 
-                3px 3px 0px var(--color-amarillo), 
-                6px 6px 0px var(--color-azul);
+            text-shadow: 3px 3px 0px var(--color-amarillo), 6px 6px 0px var(--color-azul);
             transform: rotate(-1deg);
             margin-bottom: 20px;
         }
 
-        /* Imagen centrada */
         .imagen-centro {
             display: block;
             margin: 20px auto;
@@ -45,9 +42,17 @@
             border-radius: 15px;
         }
 
+        .creador-img {
+            display: block;
+            margin: 15px auto;
+            width: 250px;
+            border: 4px solid var(--borde-negro);
+            border-radius: 10px;
+        }
+
         section {
             width: 90%;
-            max-width: 800px;
+            max-width: 850px;
             background: white;
             border: 5px solid var(--borde-negro);
             border-radius: 15px;
@@ -55,12 +60,14 @@
             margin-top: 30px;
         }
 
-        ul { list-style-type: "👉 "; }
-
-        footer {
-            margin-top: 30px;
-            font-weight: bold;
+        h2 {
+            color: var(--color-morado);
+            border-bottom: 3px dashed var(--color-amarillo);
+            padding-bottom: 8px;
         }
+
+        ul { list-style-type: "👉 "; }
+        footer { margin-top: 40px; font-weight: bold; }
     </style>
 </head>
 
@@ -70,39 +77,29 @@
         <h1>📖 Historia de Ed, Edd y Eddy</h1>
     </header>
 
-    <!-- Imagen desde internet centrada -->
     <img src="https://m.media-amazon.com/images/S/pv-target-images/721f421d6c8ae290d9f226c1e70845da8e30a3c3ecede236efd8fd6c5d7e873d._SX1080_FMjpg_.jpg"
-         alt="Ed, Edd n Eddy"
+         alt="Ed, Edd y Eddy"
          class="imagen-centro">
 
     <section>
         <h2>Sobre la serie</h2>
         <p>
-            <strong>Ed, Edd y Eddy</strong> es una serie animada que cuenta las aventuras de tres amigos que viven en un vecindario suburbano.
-            La historia gira alrededor de sus planes para ganar dinero y comprar enormes caramelos llamados <em>jawbreakers</em>.
+            <strong>Ed, Edd y Eddy</strong> es una serie animada que cuenta las aventuras de tres amigos en un vecindario suburbano. 
+            Los personajes Ed, Edd (Doble D) y Eddy siempre tratan de conseguir dinero para comprar enormes caramelos llamados <em>jawbreakers</em>.
         </p>
 
         <p>
-            En casi todos los episodios, los tres amigos crean negocios improvisados o ideas exageradas que terminan saliendo mal,
-            causando caos en el vecindario y problemas con los demás niños.
-        </p>
-
-        <h2>Los personajes principales</h2>
-        <ul>
-            <li><strong>Ed:</strong> Fuerte, ingenuo y amante de las películas de monstruos.</li>
-            <li><strong>Edd (Doble D):</strong> El más inteligente y responsable del grupo.</li>
-            <li><strong>Eddy:</strong> El líder ambicioso del grupo.</li>
-        </ul>
-
-        <p>
-            A pesar de que sus planes casi siempre fracasan, los tres amigos permanecen unidos.
-            La serie es conocida por su humor exagerado y estilo caricaturesco.
+            En casi todos los episodios, sus planes terminan saliendo mal, provocando situaciones cómicas, caos en la vecindad y muchas risas.
         </p>
     </section>
-     </section>
 
     <section>
         <h2>🧠 El creador y cómo nació la idea</h2>
+
+        <img src="https://m.media-amazon.com/images/M/MV5BMTk3NDM0NjUyOF5BMl5BanBnXkFtZTYwMzQ4Njgy._V1_.jpg"
+             alt="Danny Antonucci"
+             class="creador-img">
+
         <p>
             <strong>Danny Antonucci</strong> es un animador canadiense conocido por crear <strong>Ed, Edd y Eddy</strong>.
             Antes de esta serie, Antonucci trabajó en animación tradicional y quería un proyecto más libre, con personajes exagerados
@@ -135,7 +132,6 @@
             <li>Equipo de producción y música que completó la serie.</li>
         </ul>
     </section>
-
 
     <footer>
         Página informativa sobre Ed, Edd y Eddy
