@@ -6,17 +6,19 @@
     <title>El Callejón de los Eds</title>
     <style>
         :root {
-            --color-rojo: #d9534f;
-            --color-azul: #5bc0de;
-            --color-verde: #5cb85c;
-            --color-amarillo: #f0ad4e;
-            --fondo: #fdf5e6;
+            --color-amarillo: #FFD400;  
+            --color-verde: #00C853;      
+            --color-azul: #00B0FF;   
+            --color-rojo: #FF3D00;     
+            --color-morado: #8E24AA;       
+            --fondo: #fdf5e6;           
+            --borde-negro: #111;
         }
 
         body {
             background-color: var(--fondo);
             font-family: 'Comic Sans MS', 'Arial', sans-serif;
-            color: #333;
+            color: #222;
             margin: 0;
             padding: 20px;
             display: flex;
@@ -26,8 +28,10 @@
 
         header h1 {
             font-size: 3.5rem;
-            color: var(--color-rojo);
-            text-shadow: 3px 3px 0px var(--color-amarillo), 6px 6px 0px var(--color-azul);
+            color: var(--color-rojo-eddy);
+            text-shadow: 
+                3px 3px 0px var(--color-amarillo-edd), 
+                6px 6px 0px var(--color-azul-doble);
             transform: rotate(-1deg);
             margin-bottom: 40px;
         }
@@ -42,32 +46,43 @@
         }
 
         .card {
-            background: #fff;
-            border: 4px solid #222;
-            border-radius: 15px 50px 15px 5px;
+            background: white;
+            border: 4px solid var(--borde-negro);
+            border-radius: 20px 50px 15px 10px;
             padding: 15px 25px;
             cursor: pointer;
             text-align: center;
             font-weight: bold;
             transition: all 0.2s ease;
-            box-shadow: 6px 6px 0px #222;
+            box-shadow: 6px 6px 0px var(--borde-negro);
             user-select: none;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 10px 10px 0px #222;
+            transform: translateY(-6px) rotate(-1deg);
+            box-shadow: 10px 10px 0px var(--borde-negro);
         }
 
         .card:active {
             transform: translateY(2px);
-            box-shadow: 2px 2px 0px #222;
+            box-shadow: 2px 2px 0px var(--borde-negro);
         }
 
-        /* Colores dinámicos para las pestañas */
-        .card[data-section="historia"] { border-color: var(--color-verde); }
-        .card[data-section="ambientacion"] { border-color: var(--color-azul); }
-        .card[data-section="creepy"] { border-color: var(--color-rojo); }
+        /* Colores dinámicos más vivos */
+        .card[data-section="historia"] { 
+            background: var(--color-verde-ed); 
+            color: white;
+        }
+
+        .card[data-section="ambientacion"] { 
+            background: var(--color-azul-doble); 
+            color: white;
+        }
+
+        .card[data-section="creepy"] { 
+            background: var(--color-rojo-eddy); 
+            color: white;
+        }
 
         /* Contenedor de Contenido */
         #content-viewer {
@@ -75,40 +90,41 @@
             max-width: 800px;
             min-height: 300px;
             background: white;
-            border: 5px solid #222;
-            border-radius: 10px;
+            border: 5px solid var(--borde-negro);
+            border-radius: 15px;
             padding: 30px;
             box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
             position: relative;
         }
 
-        /* Estilos para el contenido interno */
+        /* Estilos internos */
         .hidden { display: none; }
         
         .section-title {
-            color: var(--color-rojo);
-            border-bottom: 4px dashed var(--color-amarillo);
+            color: var(--color-morado);
+            border-bottom: 4px dashed var(--color-amarillo-edd);
             padding-bottom: 10px;
         }
 
         .warning-box {
-            background: #ffdbdb;
-            border: 2px solid #d9534f;
+            background: #FFE0E0;
+            border: 3px solid var(--color-rojo-eddy);
             padding: 15px;
             margin: 15px 0;
-            border-radius: 5px;
+            border-radius: 10px;
         }
 
         .curiosidades-grid {
-            background: #f0f8ff;
+            background: #E3F2FD;
             padding: 15px;
-            border-left: 10px solid var(--color-azul);
+            border-left: 10px solid var(--color-azul-doble);
             margin-top: 20px;
         }
 
         ul { list-style-type: "👉 "; }
     </style>
 </head>
+
 <body>
 
     <header>
