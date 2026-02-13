@@ -64,3 +64,7 @@ Fue una de las series originales más longevas de Cartoon Network.
 Su estilo de animación incluye líneas que se mueven ligeramente, dando sensación vibrante.
 
 Es considerada una de las caricaturas más icónicas de finales de los 90.
+
+
+
+https://harmonious-gelato-2c9ca8.netlify.app/
