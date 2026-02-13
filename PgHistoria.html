@@ -8,7 +8,7 @@
         :root {
             --color-amarillo: #FFD400;  
             --color-verde: #00C853;      
-            --color-azul: #a1e0fd;   
+            --color-azul: #00B0FF;   
             --color-rojo: #FF3D00;     
             --color-morado: #8E24AA;       
             --fondo: #00C853;           
@@ -28,100 +28,39 @@
 
         header h1 {
             font-size: 3.5rem;
-            color: var(--color-rojo-eddy);
+            color: var(--color-rojo);
             text-shadow: 
-                3px 3px 0px var(--color-amarillo-edd), 
-                6px 6px 0px var(--color-azul-doble);
+                3px 3px 0px var(--color-amarillo), 
+                6px 6px 0px var(--color-azul);
             transform: rotate(-1deg);
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
-        /* Menú Horizontal */
-        .menu-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
+        /* Imagen centrada */
+        .imagen-centro {
+            display: block;
+            margin: 20px auto;
+            width: 400px;
+            border: 5px solid var(--borde-negro);
+            border-radius: 15px;
         }
 
-        .card {
-            background: white;
-            border: 4px solid var(--borde-negro);
-            border-radius: 20px 50px 15px 10px;
-            padding: 15px 25px;
-            cursor: pointer;
-            text-align: center;
-            font-weight: bold;
-            transition: all 0.2s ease;
-            box-shadow: 6px 6px 0px var(--borde-negro);
-            user-select: none;
-        }
-
-        .card:hover {
-            transform: translateY(-6px) rotate(-1deg);
-            box-shadow: 10px 10px 0px var(--borde-negro);
-        }
-
-        .card:active {
-            transform: translateY(2px);
-            box-shadow: 2px 2px 0px var(--borde-negro);
-        }
-
-        /* Colores dinámicos más vivos */
-        .card[data-section="historia"] { 
-            background: var(--color-verde-ed); 
-            color: white;
-        }
-
-        .card[data-section="ambientacion"] { 
-            background: var(--color-azul-doble); 
-            color: white;
-        }
-
-        .card[data-section="creepy"] { 
-            background: var(--color-rojo-eddy); 
-            color: white;
-        }
-
-        /* Contenedor de Contenido */
-        #content-viewer {
+        section {
             width: 90%;
             max-width: 800px;
-            min-height: 300px;
             background: white;
             border: 5px solid var(--borde-negro);
             border-radius: 15px;
             padding: 30px;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
-            position: relative;
-        }
-
-        /* Estilos internos */
-        .hidden { display: none; }
-        
-        .section-title {
-            color: var(--color-morado);
-            border-bottom: 4px dashed var(--color-amarillo-edd);
-            padding-bottom: 10px;
-        }
-
-        .warning-box {
-            background: #FFE0E0;
-            border: 3px solid var(--color-rojo-eddy);
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 10px;
-        }
-
-        .curiosidades-grid {
-            background: #E3F2FD;
-            padding: 15px;
-            border-left: 10px solid var(--color-azul-doble);
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         ul { list-style-type: "👉 "; }
+
+        footer {
+            margin-top: 30px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -130,6 +69,11 @@
     <header>
         <h1>📖 Historia de Ed, Edd y Eddy</h1>
     </header>
+
+    <!-- Imagen desde internet centrada -->
+    <img src="https://m.media-amazon.com/images/S/pv-target-images/721f421d6c8ae290d9f226c1e70845da8e30a3c3ecede236efd8fd6c5d7e873d._SX1080_FMjpg_.jpg"
+         alt="Ed, Edd n Eddy"
+         class="imagen-centro">
 
     <section>
         <h2>Sobre la serie</h2>
@@ -145,15 +89,14 @@
 
         <h2>Los personajes principales</h2>
         <ul>
-            <li><strong>Ed:</strong> Fuerte, ingenuo y amante de las películas de monstruos. Tiene una gran imaginación.</li>
-            <li><strong>Edd (Doble D):</strong> El más inteligente y responsable del grupo. Siempre usa un gorro negro.</li>
-            <li><strong>Eddy:</strong> El líder ambicioso del grupo, siempre buscando la forma de hacerse rico rápidamente.</li>
+            <li><strong>Ed:</strong> Fuerte, ingenuo y amante de las películas de monstruos.</li>
+            <li><strong>Edd (Doble D):</strong> El más inteligente y responsable del grupo.</li>
+            <li><strong>Eddy:</strong> El líder ambicioso del grupo.</li>
         </ul>
 
         <p>
             A pesar de que sus planes casi siempre fracasan, los tres amigos permanecen unidos.
-            La serie es conocida por su humor exagerado, expresiones dinámicas y situaciones absurdas
-            que la hicieron muy popular a finales de los años 90 y principios de los 2000.
+            La serie es conocida por su humor exagerado y estilo caricaturesco.
         </p>
     </section>
 
