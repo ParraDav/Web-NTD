@@ -16,7 +16,6 @@
         body {
             background-color: var(--fondo);
             font-family: 'Comic Sans MS', 'Arial', sans-serif;
-            color: #333;
             margin: 0;
             padding: 20px;
             display: flex;
@@ -32,12 +31,10 @@
             margin-bottom: 40px;
         }
 
-        /* Menú Horizontal */
         .menu-container {
             display: flex;
             justify-content: center;
             gap: 20px;
-            flex-wrap: wrap;
             margin-bottom: 40px;
         }
 
@@ -49,64 +46,27 @@
             cursor: pointer;
             text-align: center;
             font-weight: bold;
-            transition: all 0.2s ease;
             box-shadow: 6px 6px 0px #222;
-            user-select: none;
+            width: 180px;
+            transition: transform 0.2s;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 10px 10px 0px #222;
-        }
+        .card:hover { transform: scale(1.05); }
 
-        .card:active {
-            transform: translateY(2px);
-            box-shadow: 2px 2px 0px #222;
-        }
+        .card.historia { border-color: var(--color-verde); }
+        .card.duracion { border-color: var(--color-azul); }
+        .card.creepy { border-color: var(--color-rojo); }
 
-        /* Colores dinámicos para las pestañas */
-        .card[data-section="historia"] { border-color: var(--color-verde); }
-        .card[data-section="ambientacion"] { border-color: var(--color-azul); }
-        .card[data-section="creepy"] { border-color: var(--color-rojo); }
-
-        /* Contenedor de Contenido */
-        #content-viewer {
+        #viewport {
             width: 90%;
-            max-width: 800px;
-            min-height: 300px;
+            max-width: 900px;
+            min-height: 400px;
             background: white;
             border: 5px solid #222;
             border-radius: 10px;
             padding: 30px;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
-            position: relative;
+            box-shadow: 15px 15px 0px rgba(0,0,0,0.1);
         }
-
-        /* Estilos para el contenido interno */
-        .hidden { display: none; }
-        
-        .section-title {
-            color: var(--color-rojo);
-            border-bottom: 4px dashed var(--color-amarillo);
-            padding-bottom: 10px;
-        }
-
-        .warning-box {
-            background: #ffdbdb;
-            border: 2px solid #d9534f;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-
-        .curiosidades-grid {
-            background: #f0f8ff;
-            padding: 15px;
-            border-left: 10px solid var(--color-azul);
-            margin-top: 20px;
-        }
-
-        ul { list-style-type: "👉 "; }
     </style>
 </head>
 <body>
@@ -116,72 +76,29 @@
     </header>
 
     <nav class="menu-container">
-        <div class="card" data-section="historia">Historia y Creación</div>
-        <div class="card" data-section="ambientacion">Ambientación y Duración</div>
-        <div class="card" data-section="creepy">Creepypastas y Curiosidades</div>
+        <div class="card historia" onclick="cargarSeccion('PgHistoria.html')">Historia y Creación</div>
+        <div class="card duracion" onclick="cargarSeccion('PgDuracion-Ambientacion.html')">Ambientación y Duración</div>
+        <div class="card creepy" onclick="cargarSeccion('Creepypastas.html')">Creepypastas y Curiosidades</div>
     </nav>
 
-    <main id="content-viewer">
-        <div id="default-msg" style="text-align:center; opacity:0.5; margin-top:100px;">
-            <h3>¡Haz clic en una opción arriba para ver los detalles!</h3>
-            <p>¿Qué trama tienes hoy, Eddy?</p>
-        </div>
-
-        <div id="historia" class="hidden">
-            <h2 class="section-title">Historia y Creación</h2>
-            <p>Contenido en construcción... ¡Vuelve pronto por tus caramelos!</p>
-        </div>
-
-        <div id="ambientacion" class="hidden">
-            <h2 class="section-title">Ambientación y Duración</h2>
-            <p>Contenido en construcción... El callejón está siendo pintado.</p>
-        </div>
-
-        <div id="creepy" class="hidden">
-            <h2 class="section-title">👻 Creepypastas y Curiosidades</h2>
-            
-            <div class="warning-box">
-                <strong>⚠️ Nota:</strong> Todas las historias de terror son ficción creada por fans para asustar o entretener. No son oficiales.
-            </div>
-
-            <h3>Leyendas Urbanas</h3>
-            <ul>
-                <li><strong>El Purgatorio:</strong> Se dice que todos los niños están muertos y viven en un estado eterno de verano.</li>
-                <li><strong>El Episodio Perdido:</strong> Relatos sobre cintas prohibidas con finales trágicos.</li>
-                <li><strong>El Vecindario Maldito:</strong> Rumores sobre por qué nunca aparecen adultos.</li>
-            </ul>
-
-            <div class="curiosidades-grid">
-                <h3>🎨 Curiosidades</h3>
-                <ul>
-                    <li>Fue una de las series originales más longevas de Cartoon Network.</li>
-                    <li>Su estilo de animación usa el efecto <strong>"boiling lines"</strong> (líneas que vibran).</li>
-                    <li>Es un ícono absoluto de la animación de finales de los 90.</li>
-                </ul>
-            </div>
-        </div>
+    <main id="viewport">
+        <h2 style="text-align:center; color:#999; margin-top:100px;">Selecciona una sección para cargar el contenido...</h2>
     </main>
 
     <script>
-        // Lógica para cambiar de sección sin recargar
-        const cards = document.querySelectorAll('.card');
-        const sections = document.querySelectorAll('#content-viewer > div');
-
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                const targetId = card.getAttribute('data-section');
-                
-                // Ocultar todas las secciones
-                sections.forEach(section => {
-                    section.classList.add('hidden');
+        function cargarSeccion(archivo) {
+            fetch(archivo)
+                .then(response => {
+                    if (!response.ok) throw new Error('Archivo no encontrado');
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById('viewport').innerHTML = html;
+                })
+                .catch(error => {
+                    document.getElementById('viewport').innerHTML = "Error al cargar la sección.";
                 });
-
-                // Mostrar la sección seleccionada
-                document.getElementById(targetId).classList.remove('hidden');
-                document.getElementById('default-msg').classList.add('hidden');
-            });
-        });
+        }
     </script>
-
 </body>
 </html>
