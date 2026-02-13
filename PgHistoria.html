@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Callejón de los Eds</title>
+
     <style>
         :root {
             --color-amarillo: #FFD400;  
@@ -32,22 +33,30 @@
             text-shadow: 3px 3px 0px var(--color-amarillo), 6px 6px 0px var(--color-azul);
             transform: rotate(-1deg);
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .imagen-centro {
-            display: block;
-            margin: 20px auto;
             width: 400px;
             border: 5px solid var(--borde-negro);
             border-radius: 15px;
         }
 
         .creador-img {
-            display: block;
-            margin: 15px auto;
             width: 250px;
             border: 4px solid var(--borde-negro);
             border-radius: 10px;
+        }
+
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            margin-top: 8px;
+            font-style: italic;
         }
 
         section {
@@ -66,8 +75,14 @@
             padding-bottom: 8px;
         }
 
-        ul { list-style-type: "👉 "; }
-        footer { margin-top: 40px; font-weight: bold; }
+        ul { 
+            list-style-type: "👉 "; 
+        }
+
+        footer { 
+            margin-top: 40px; 
+            font-weight: bold; 
+        }
     </style>
 </head>
 
@@ -77,59 +92,81 @@
         <h1>📖 Historia de Ed, Edd y Eddy</h1>
     </header>
 
-    <img src="https://m.media-amazon.com/images/S/pv-target-images/721f421d6c8ae290d9f226c1e70845da8e30a3c3ecede236efd8fd6c5d7e873d._SX1080_FMjpg_.jpg"
-         alt="Ed, Edd y Eddy"
-         class="imagen-centro">
+    <!-- Imagen principal -->
+    <figure>
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/721f421d6c8ae290d9f226c1e70845da8e30a3c3ecede236efd8fd6c5d7e873d._SX1080_FMjpg_.jpg"
+             alt="Ed, Edd y Eddy"
+             class="imagen-centro">
+
+        <figcaption>
+            Imagen tomada de Amazon Prime Video.
+        </figcaption>
+    </figure>
 
     <section>
         <h2>Sobre la serie</h2>
         <p>
-            <strong>Ed, Edd y Eddy</strong> es una serie animada que cuenta las aventuras de tres amigos en un vecindario suburbano. 
-            Los personajes Ed, Edd (Doble D) y Eddy siempre tratan de conseguir dinero para comprar enormes caramelos llamados <em>jawbreakers</em>.
+            <strong>Ed, Edd y Eddy</strong> es una serie animada que cuenta las aventuras de tres amigos 
+            en un vecindario suburbano. Los personajes Ed, Edd (Doble D) y Eddy siempre tratan 
+            de conseguir dinero para comprar enormes caramelos llamados <em>jawbreakers</em>.
         </p>
 
         <p>
-            En casi todos los episodios, sus planes terminan saliendo mal, provocando situaciones cómicas, caos en la vecindad y muchas risas.
+            En casi todos los episodios, sus planes terminan saliendo mal, provocando 
+            situaciones cómicas, caos en la vecindad y muchas risas.
         </p>
     </section>
 
     <section>
         <h2>🧠 El creador y cómo nació la idea</h2>
 
-        <img src="https://m.media-amazon.com/images/M/MV5BMTk3NDM0NjUyOF5BMl5BanBnXkFtZTYwMzQ4Njgy._V1_.jpg"
-             alt="Danny Antonucci"
-             class="creador-img">
+        <!-- Imagen del creador -->
+        <figure>
+            <img src="https://m.media-amazon.com/images/M/MV5BMTk3NDM0NjUyOF5BMl5BanBnXkFtZTYwMzQ4Njgy._V1_.jpg"
+                 alt="Danny Antonucci"
+                 class="creador-img">
+
+            <figcaption>
+                Fotografía de Danny Antonucci tomada de Amazon.
+            </figcaption>
+        </figure>
 
         <p>
-            <strong>Danny Antonucci</strong> es un animador canadiense conocido por crear <strong>Ed, Edd y Eddy</strong>.
-            Antes de esta serie, Antonucci trabajó en animación tradicional y quería un proyecto más libre, con personajes exagerados
-            y humor absurdo.
+            <strong>Danny Antonucci</strong> es un animador canadiense conocido por crear 
+            <strong>Ed, Edd y Eddy</strong>. Antes de esta serie, Antonucci trabajó en 
+            animación tradicional y buscaba desarrollar un proyecto con mayor libertad creativa.
         </p>
 
         <p>
-            La idea principal era crear una caricatura que se sintiera como si fuera hecha por niños: torpe, divertida, y con problemas exagerados.
-            Antonucci logró esto al diseñar personajes únicos y una animación con líneas que parecían vibrar.
+            La idea principal era crear una caricatura que se sintiera como si fuera hecha por niños: 
+            torpe, divertida y con problemas exagerados. El estilo visual se caracteriza por 
+            líneas dinámicas y movimientos expresivos que le dan una identidad única.
         </p>
 
         <h2>🛑 ¿Por qué terminó la serie?</h2>
         <p>
-            La producción de la serie se detuvo principalmente porque la historia ya había contado lo que el creador quería mostrar
-            y porque Cartoon Network decidió concluirla oficialmente después de 6 temporadas.
+            La producción de la serie finalizó después de seis temporadas porque el creador 
+            consideró que la historia ya había cumplido su ciclo narrativo. 
+            Además, el canal decidió cerrar oficialmente el proyecto.
         </p>
+
         <p>
-            El final llegó con una película especial llamada <strong>“Ed, Edd n Eddy’s Big Picture Show”</strong>, que cerró muchas de las tramas
-            de forma emotiva y divertida. Aunque la serie terminó, muchos fans siguen recordándola con cariño.
+            El cierre definitivo ocurrió con la película especial 
+            <strong>“Ed, Edd n Eddy’s Big Picture Show”</strong>, 
+            la cual concluyó la historia de manera emotiva y definitiva.
         </p>
     </section>
 
     <section>
         <h2>👥 Colaboradores importantes</h2>
-        <p>Aunque Danny Antonucci fue el creador, hubo muchas personas detrás de la serie:</p>
+        <p>
+            Aunque Danny Antonucci fue el creador, la serie contó con un amplio equipo de trabajo:
+        </p>
         <ul>
-            <li>Guionistas que desarrollaron los episodios.</li>
-            <li>Animadores que dieron vida a los personajes.</li>
-            <li>Actores de voz que interpretaron a los Eds y demás personajes.</li>
-            <li>Equipo de producción y música que completó la serie.</li>
+            <li>Guionistas encargados de desarrollar las historias.</li>
+            <li>Animadores responsables del estilo visual.</li>
+            <li>Actores de voz que interpretaron a los personajes.</li>
+            <li>Equipo de producción y música que complementó la serie.</li>
         </ul>
     </section>
 
