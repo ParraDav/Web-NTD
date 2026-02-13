@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,9 +61,17 @@
         }
 
         /* Colores por sección */
-        .card.historia { border-color: var(--color-verde); }
-        .card.duracion { border-color: var(--color-azul); }
-        .card.creepy { border-color: var(--color-rojo); }
+        .card.historia {
+            border-color: var(--color-verde);
+        }
+
+        .card.duracion {
+            border-color: var(--color-azul);
+        }
+
+        .card.creepy {
+            border-color: var(--color-rojo);
+        }
 
         /* Contenedor donde se cargará el HTML externo */
         #viewport {
@@ -73,7 +82,7 @@
             border: 5px solid #222;
             border-radius: 10px;
             padding: 30px;
-            box-shadow: 15px 15px 0px rgba(0,0,0,0.1);
+            box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.1);
         }
 
         .loading-msg {
@@ -83,46 +92,41 @@
         }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <h1>ED, EDD n EDDY</h1>
-    </header>
+    <section>
+        <h2>Duración</h2>
+        <ul>
+            <li>6 temporadas</li>
+            <li>69 episodios</li>
+            <li>131 segmentos</li>
+            <li>Duración por episodio: 22 minutos</li>
+            <li>Duración por segmento: 11 minutos</li>
+            <li>Película final: "Ed, Edd n Eddy's Big Picture Show" (87 minutos)</li>
+        </ul>
 
-    <nav class="menu-container">
-        <div class="card historia" onclick="cargarSeccion('PgHistoria.html')">Historia y Creación</div>
-        <div class="card duracion" onclick="cargarSeccion('PgDuracion-Ambientacion.html')">Ambientación y Duración</div>
-        <div class="card creepy" onclick="cargarSeccion('Creepypastas.html')">Creepypastas y Curiosidades</div>
-    </nav>
+        <h2>Ambientación</h2>
+        <p>La serie se desarrolla principalmente en un vecindario suburbano ficticio llamado Peach Creek. La mayoría de
+            los episodios transcurren durante el verano, lo que genera una sensación constante de vacaciones.</p>
 
-    <main id="viewport">
-        <div class="loading-msg">
-            <h2>¡Hola, cabeza de chorlito!</h2>
-            <p>Selecciona una opción arriba para empezar el plan.</p>
-        </div>
-    </main>
+        <ul>
+            <li>Escenario principal: Callejón sin salida (cul-de-sac)</li>
+            <li>Casi nunca aparecen adultos en pantalla</li>
+            <li>Entornos frecuentes: parque, zona de construcción, casas del vecindario</li>
+            <li>Última temporada ambientada en la escuela secundaria Peach Creek Jr. High</li>
+            <li>Época sugerida: finales de los años 90 o principios de los 2000</li>
+        </ul>
 
-    <script>
-        function cargarSeccion(archivo) {
-            const contenedor = document.getElementById('viewport');
-            
-            // Mostramos un mensaje de carga mientras el archivo llega
-            contenedor.innerHTML = '<p style="text-align:center;">Cargando...</p>';
-
-            fetch(archivo)
-                .then(response => {
-                    if (!response.ok) throw new Error('No se pudo cargar el archivo');
-                    return response.text();
-                })
-                .then(html => {
-                    // Inyectamos solo el contenido del archivo recibido
-                    contenedor.innerHTML = html;
-                })
-                .catch(error => {
-                    contenedor.innerHTML = `<p style="color:red;">Error: ${error.message}. Asegúrate de que el archivo existe en el repositorio.</p>`;
-                });
-        }
-    </script>
+        <h2>Estilo y Tono</h2>
+        <ul>
+            <li>Humor físico exagerado</li>
+            <li>Animación con líneas irregulares características</li>
+            <li>Música ligera con estilo jazz</li>
+            <li>Tramas centradas en planes para ganar dinero y comprar caramelos gigantes (jawbreakers)</li>
+        </ul>
+    </section>
 
 </body>
+
 </html>
